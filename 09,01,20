@@ -1,0 +1,8 @@
+create table FTE
+(id number,name varchar(50),gender varchar(50),designation varchar(50),salary int);
+Desc FTE;
+insert into FTE values(1,'Neel','male','manager',70000);
+select * from FTE;
+select * from FTE where salary>50000 and salary<100000;
+create index I_file ON
+FTE(column1)
