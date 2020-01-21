@@ -1,0 +1,16 @@
+create table E_detail
+(e_id int,e_name varchar(50),e_dept varchar(50),e_sal int);
+insert into e_detail values(100,'Ramanpreet','HR',10000);
+insert into e_detail values(101,'Harpreet','IT',20000);
+insert into e_detail values(102,'Navpreet','Finance',30000);
+insert into e_detail values(103,'Jagpreet','Health',30000);
+insert into e_detail values(104,'Manpreet','HR',50000);
+insert into e_detail values(105,'Mandeep','Health',2000);
+select max(e_sal) from e_detail;
+select min(e_sal) from e_detail;
+select count(*) from e_detail;
+select count(distinct(e_sal)) from e_detail;
+select sum(e_sal) from e_detail;
+select avg(e_sal) from e_detail;
+select max(e_sal) from e_detail where e_sal !=(select max(e_sal) from e_detail);
+select e_name,e_dept from e_detail where e_sal = (select max(e_sal) from e_detail where e_sal !=(select max (e_sal)from e_detail));
